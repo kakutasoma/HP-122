@@ -1,0 +1,586 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    background-color: rgb(60, 134, 218);
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+}
+
+header h1 {
+    /* background-color: red; */
+    margin-left: 80px;
+    width: 20%;
+    text-align: right;
+}
+
+header h2 {
+    display: none;
+}
+
+header h1 a {
+    transition: all .3s;
+    color: white;
+    opacity: 0.5;
+}
+
+header h1 a:hover {
+    opacity: 1;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+header h1 img {
+    width: 20%;
+    background-color: white;
+    transition: transform 1s ease;
+}
+
+header img:hover {
+    transform: rotate(360deg);
+}
+
+
+header ul {
+    display: flex;
+    width: 100%;
+    /* background-color: red; */
+    margin-right: 150px;
+
+}
+
+header li {
+    width: 100%;
+    text-align: center;
+}
+
+header a {
+    color: rgb(117, 144, 231);
+    padding: 10px;
+    transition: all .3s;
+    color: white;
+    opacity: 0.5;
+}
+
+header ul a:focus {
+    background-color: rgb(38, 116, 211);
+    border-radius: 20px;
+    color: white;
+
+}
+
+header ul a:hover {
+    opacity: 1;
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: rgb(38, 116, 211);
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーハンバーガー */
+.sp-menu {
+    margin-left: auto;
+    display: none;
+}
+
+.sp-menu #open {
+    font-size: 32px;
+    line-height: 64px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .1s;
+    display: none;
+}
+
+.overlay #close {
+    position: absolute;
+    top: 26px;
+    right: 4px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.overlay ul {
+    list-style: none;
+    margin: 100px auto;
+    padding: 0;
+}
+
+.overlay li {
+    margin-top: 30px;
+    opacity: 0;
+    transform: translate(0, 16px);
+    transition: transform .3s, opacity 3s;
+}
+
+.overlay a {
+    color: black;
+}
+
+.overlay a:hover {
+    padding: 10px;
+    background-color: rgb(38, 116, 211);
+    border-radius: 20px;
+    color: white;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay.show li {
+    opacity: 1;
+    transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+    transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+    transition-delay: .3s;
+}
+
+.login {
+    margin-right: 80px;
+}
+
+.login a {
+    border: none;
+    /* border-radius: 5px; */
+    margin: 0 8px;
+    transition: all .6s;
+    padding: 10px 18px;
+}
+
+.login a:focus {
+    background-color: rgb(68, 134, 184);
+    color: white;
+    border-radius: 20px;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーートップ画像 */
+.top-img {
+    width: 100%;
+    margin: 100px 0 300px 0;
+}
+
+.top-img img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーサービス一覧（メイン） */
+/* ------------------------------------------プログラミング */
+.program {
+    width: 80%;
+    margin: 300px auto;
+    display: flex;
+    background-color: aqua;
+}
+
+.program h2 {
+    margin-top: 50px;
+    font-family: cursive;
+}
+
+.program p {
+    margin: 80px 0 30px 0;
+    opacity: 0.6;
+    width: 85%;
+}
+
+.program img {
+    border-radius: 20px;
+}
+
+ .rogo {
+    background-color: red;
+    display: flex;
+    width: 80%;
+    align-items: stretch;
+}
+
+ .rogo img {
+    width: 100%;
+    display: block;
+}
+
+ .rogo a {
+    margin: 20px;
+    background-color: red;
+    width: 120px;
+    display: block;
+}
+
+/* -----------------------------------------------アプリ開発 */
+
+.hp {
+    width: 80%;
+    margin: 300px auto;
+    display: flex;
+    background-color: aqua;
+}
+
+.hp h2 {
+    margin-top: 50px;
+    font-family: cursive;
+}
+
+.hp p {
+    margin: 80px 0 30px 0;
+    opacity: 0.6;
+    width: 85%;
+}
+
+.hp img {
+    border-radius: 20px;
+}
+
+.hp .rogo {
+    background-color: red;
+    display: flex;
+    width: 80%;
+    align-items: stretch;
+}
+
+.hp .rogo img {
+    width: 100%;
+    display: block;
+}
+
+.hp .rogo a {
+    margin: 20px;
+    /* background-color: red; */
+    width: 120px;
+    display: block;
+}
+
+
+/* .hp {
+    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  } */
+   
+  @keyframes hp {
+    0% {
+      transform: translateX(180px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+    }
+    40%,100% {
+      opacity: 1;
+    }
+  }
+
+.hp {
+    width: 80%;
+    margin: 300px auto;
+    display: flex;
+    /* background-color: red; */
+    flex-direction: row-reverse;
+}
+
+.hp h2 {
+    margin-top: 50px;
+    font-family: cursive;
+}
+
+.hp p {
+    margin-top: 80px;
+    opacity: 0.6;
+    width: 85%;
+}
+
+.hp img {
+    margin-right: 150px;
+    width: 42%;
+    border-radius: 15px;
+}
+
+
+
+.gk-u {
+    width: 80%;
+    margin: 300px auto;
+    display: flex;
+    /* background-color: red; */
+}
+
+.gk-u h2 {
+    margin-top: 50px;
+    font-family: cursive;
+}
+
+.gk-u p {
+    margin-top: 80px;
+    opacity: 0.6;
+    width: 85%;
+}
+
+.gk-u img {
+    margin-left: 50px;
+    width: 42%;
+    border-radius: 15px;
+}
+
+.bar {
+    width: 80%;
+    margin: 300px auto;
+    display: flex;
+    /* background-color: red; */
+    flex-direction: row-reverse;
+}
+
+.bar h2 {
+    margin-top: 50px;
+    font-family: cursive;
+}
+
+.bar p {
+    margin-top: 80px;
+    opacity: 0.6;
+    width: 85%;
+}
+
+.bar img {
+    margin-right: 150px;
+    width: 42%;
+    border-radius: 15px;
+}
+
+.eo {
+    width: 80%;
+    margin: 300px auto;
+    display: flex;
+    /* background-color: red; */
+}
+
+.eo h2 {
+    margin-top: 50px;
+    font-family: cursive;
+}
+
+.eo p {
+    margin-top: 80px;
+    opacity: 0.6;
+    width: 85%;
+}
+
+.eo img {
+    margin-left: 50px;
+    width: 42%;
+    border-radius: 15px;
+}
+
+
+
+
+
+footer {
+    margin-top: 500px;
+    padding: 50px 0 100px 80px;
+    background-color: black;
+    color: white;
+    display: flex;
+    font-size: 12px;
+}
+
+footer h2 {
+    display: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+.policy {
+    width: 300px;
+    margin: 0 5px 0 200px;
+    /* background-color: red; */
+}
+
+.policy img {
+    margin-top: 70px;
+    width: 60%;
+}
+
+
+footer hr {
+    width: 180px;
+    margin: 40px 0 10px 0;
+}
+
+footer li {
+    padding: 1px 0;
+}
+
+.contact {
+    width: 300px;
+    /* background-color: aqua; */
+}
+
+.contact div {
+    margin-bottom: 60px;
+}
+
+.service {
+    /* background-color: red; */
+    width: 300px;
+    margin-left: 25px;
+}
+
+.service .logo {
+    margin-left: 40px;
+}
+
+.logo img {
+    width: 25%;
+}
+
+
+
+@media (max-width:428px) {
+
+    header h1 {
+        width: 20%;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    header h1 a {
+        width: 300px;
+    }
+
+    header h2 {
+        margin: 0 auto;
+        display: block;
+        font-size: 26px;
+        color: white;
+        text-shadow: 0 0 10px #e3e6e7;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    header h1 img {
+        width: 50%;
+        margin: 10px 0 0 30px;
+    }
+
+    header h1 a {
+        opacity: 1;
+    }
+
+    .sp-menu {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+    }
+
+    footer {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer h2 {
+        font-size: 26px;
+        font-style: italic;
+        padding: 10px;
+        display: block;
+        text-shadow: 0 0 10px #e3e6e7;
+    }
+
+
+
+    footer hr {
+        margin: 0;
+        width: 120%;
+    }
+
+    .policy {
+        margin: 100px 0 0 15px;
+    }
+
+    .policy h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .policy ul {
+        margin-top: 20px;
+    }
+
+    .policy li {
+        margin: 5px 0;
+    }
+
+    .contact {
+        margin: 50px 0 0 15px;
+    }
+
+    .contact h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .contact ul {
+        margin-top: 20px;
+    }
+
+    .contact li {
+        margin: 5px 0;
+    }
+
+    .service {
+        margin-left: 15px;
+    }
+
+    .service h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .service ul {
+        margin-top: 20px;
+    }
+
+    .service li {
+        margin: 5px 0;
+    }
+
+}
