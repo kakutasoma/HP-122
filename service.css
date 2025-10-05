@@ -222,18 +222,18 @@ article img {
     border-radius: 20px;
 }
 
- .rogo {
+ .sns {
     background-color: red;
     display: flex;
     width: 80%;
 }
 
- .rogo img {
+ .sns img {
     width: 100%;
     display: block;
 }
 
- .rogo a {
+ .sns a {
     margin: 20px;
     background-color: red;
     width: 120px;
@@ -249,7 +249,7 @@ article:nth-child(even) {
     display: flex;
 }
 
-article .rogo:nth-child(even) {
+article .sns:nth-child(even) {
     margin: 20px;
     background-color: aqua;
 }
@@ -319,7 +319,7 @@ footer li {
     margin-left: 25px;
 }
 
-.service .logo {
+.logo {
     margin-left: 40px;
 }
 
