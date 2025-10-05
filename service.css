@@ -200,25 +200,25 @@ header ul a:hover {
 
 /* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーサービス一覧（メイン） */
 /* ------------------------------------------プログラミング */
-.program {
+article {
     width: 80%;
     margin: 300px auto;
     display: flex;
     background-color: aqua;
 }
 
-.program h2 {
+article h2 {
     margin-top: 50px;
     font-family: cursive;
 }
 
-.program p {
+article p {
     margin: 80px 0 30px 0;
     opacity: 0.6;
     width: 85%;
 }
 
-.program img {
+article img {
     border-radius: 20px;
 }
 
@@ -226,7 +226,6 @@ header ul a:hover {
     background-color: red;
     display: flex;
     width: 80%;
-    align-items: stretch;
 }
 
  .rogo img {
@@ -241,166 +240,26 @@ header ul a:hover {
     display: block;
 }
 
-/* -----------------------------------------------アプリ開発 */
-
-.hp {
+article:nth-child(even) {
+    background-color: pink;
+    flex-direction: row-reverse;
+    font-family: cursive;
     width: 80%;
     margin: 300px auto;
     display: flex;
+}
+
+article .rogo:nth-child(even) {
+    margin: 20px;
     background-color: aqua;
 }
 
-.hp h2 {
-    margin-top: 50px;
-    font-family: cursive;
-}
-
-.hp p {
-    margin: 80px 0 30px 0;
-    opacity: 0.6;
-    width: 85%;
-}
-
-.hp img {
-    border-radius: 20px;
-}
-
-.hp .rogo {
-    background-color: red;
-    display: flex;
-    width: 80%;
-    align-items: stretch;
-}
-
-.hp .rogo img {
-    width: 100%;
-    display: block;
-}
-
-.hp .rogo a {
-    margin: 20px;
-    /* background-color: red; */
-    width: 120px;
-    display: block;
-}
-
-
-/* .hp {
-    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  } */
-   
-  @keyframes hp {
-    0% {
-      transform: translateX(180px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-    }
-    40%,100% {
-      opacity: 1;
-    }
-  }
-
-.hp {
-    width: 80%;
-    margin: 300px auto;
-    display: flex;
-    /* background-color: red; */
-    flex-direction: row-reverse;
-}
-
-.hp h2 {
-    margin-top: 50px;
-    font-family: cursive;
-}
-
-.hp p {
-    margin-top: 80px;
-    opacity: 0.6;
-    width: 85%;
-}
-
-.hp img {
-    margin-right: 150px;
-    width: 42%;
-    border-radius: 15px;
-}
+/* -----------------------------------------------アプリ開発 */
 
 
 
-.gk-u {
-    width: 80%;
-    margin: 300px auto;
-    display: flex;
-    /* background-color: red; */
-}
 
-.gk-u h2 {
-    margin-top: 50px;
-    font-family: cursive;
-}
 
-.gk-u p {
-    margin-top: 80px;
-    opacity: 0.6;
-    width: 85%;
-}
-
-.gk-u img {
-    margin-left: 50px;
-    width: 42%;
-    border-radius: 15px;
-}
-
-.bar {
-    width: 80%;
-    margin: 300px auto;
-    display: flex;
-    /* background-color: red; */
-    flex-direction: row-reverse;
-}
-
-.bar h2 {
-    margin-top: 50px;
-    font-family: cursive;
-}
-
-.bar p {
-    margin-top: 80px;
-    opacity: 0.6;
-    width: 85%;
-}
-
-.bar img {
-    margin-right: 150px;
-    width: 42%;
-    border-radius: 15px;
-}
-
-.eo {
-    width: 80%;
-    margin: 300px auto;
-    display: flex;
-    /* background-color: red; */
-}
-
-.eo h2 {
-    margin-top: 50px;
-    font-family: cursive;
-}
-
-.eo p {
-    margin-top: 80px;
-    opacity: 0.6;
-    width: 85%;
-}
-
-.eo img {
-    margin-left: 50px;
-    width: 42%;
-    border-radius: 15px;
-}
 
 
 
